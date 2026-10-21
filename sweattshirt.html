@@ -3,240 +3,347 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Product Details -- RedStore | Ecommerce Webiste Design
-    </title>
+    <meta name="description" content="Men&#x27;s Sweat T-Shirt - A moisture-wicking T-shirt designed for intense workouts. Soft, lightweight fabric moves with you and keeps sweat away from your skin." />
+    <meta name="theme-color" content="#0e1116" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tempovolt" />
+    <meta property="og:title" content="Men&#x27;s Sweat T-Shirt | Tempovolt" />
+    <meta property="og:description" content="Men&#x27;s Sweat T-Shirt - A moisture-wicking T-shirt designed for intense workouts. Soft, lightweight fabric moves with you and keeps sweat away from your skin." />
+    <title>Men&#x27;s Sweat T-Shirt | Tempovolt</title>
+    <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./static/css/style.css" />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <script src="./static/js/main.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Men's Sweat T-Shirt",
+        "image": [
+          "./assets/img/featuredproduct1.jpeg",
+          "./assets/img/featuredproduct1-1.jpeg",
+          "./assets/img/featuredproduct1-2.jpeg",
+          "./assets/img/featuredproduct1-3.jpeg",
+          "./assets/img/featuredproduct1-4.jpeg"
+        ],
+        "description": "A moisture-wicking T-shirt designed for intense workouts. Soft, lightweight fabric moves with you and keeps sweat away from your skin.",
+        "brand": {
+          "@type": "Brand",
+          "name": "Tempovolt"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "27.99",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    </script>
   </head>
   <body>
-    <!-- Navbar -->
-    <div class="container">
-      <div class="navbar">
-        <div class="logo">
-          <a href="index.html"
-            ><img src="./assets/img/logo.png" alt="STSD logo" width="155px"
-          /></a>
-        </div>
-        <nav>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="index.html" class="logo" aria-label="Tempovolt home">
+          <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M4 6h11l13 14-13 14H4l13-14z" /><path d="M17 6h7l13 14-13 14h-7l13-14z" opacity=".55" /></svg>
+          <span>Tempo<span class="logo-accent">volt</span></span>
+        </a>
+        <nav aria-label="Main">
           <ul id="MenuItems">
             <li><a href="index.html">Home</a></li>
             <li><a href="products.html">Products</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
             <li><a href="account.html">Account</a></li>
           </ul>
         </nav>
-        <a href="shoppingcart.html"
-          ><img
-            src="./assets/img/cartlogo.png"
-            alt="ShoppingCartLogo"
-            width="25px"
-            height="30px"
-        /></a>
-        <img
-          src="./assets/img/cartlogo.png"
-          alt="ShoppingCartLogo"
+        <a href="shoppingcart.html" class="cart-link" aria-label="Shopping cart">
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          <span class="cart-count" hidden>0</span>
+        </a>
+        <button
+          type="button"
           class="menu-icon"
-          onclick="menutogggle()"
-        />
+          aria-label="Toggle menu"
+          aria-controls="MenuItems"
+          aria-expanded="false"
+        >
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
       </div>
-    </div>
+    </header>
 
-    <!-- Single Product Detail -->
-    <div class="small-container single-product">
-      <div class="row">
-        <div class="col-2">
-          <img
-            src="./assets/img/featuredproduct1.jpeg"
-            class="pro-img"
-            width="100%"
-          />
-
-          <div class="small-img-row">
-            <div class="small-img-col" onclick="changeImage(this)">
-              <img src="./assets/img/featuredproduct1.jpeg" width="100%" />
+    <main id="main">
+      <!-- Product Details -->
+      <section class="small-container page-section product-detail">
+        <div class="product-gallery">
+          <img src="./assets/img/featuredproduct1.jpeg" alt="Men&#x27;s Sweat T-Shirt" width="572" height="1056" class="pro-img" fetchpriority="high" />
+            <div class="small-img-row">
+              <button
+                type="button"
+                class="small-img-col"
+                aria-label="Show image 1 of 5"
+                aria-pressed="true"
+              >
+                <img src="./assets/img/featuredproduct1.jpeg" alt="" width="572" height="1056" loading="lazy" />
+              </button>
+              <button
+                type="button"
+                class="small-img-col"
+                aria-label="Show image 2 of 5"
+                aria-pressed="false"
+              >
+                <img src="./assets/img/featuredproduct1-1.jpeg" alt="" width="437" height="857" loading="lazy" />
+              </button>
+              <button
+                type="button"
+                class="small-img-col"
+                aria-label="Show image 3 of 5"
+                aria-pressed="false"
+              >
+                <img src="./assets/img/featuredproduct1-2.jpeg" alt="" width="284" height="857" loading="lazy" />
+              </button>
+              <button
+                type="button"
+                class="small-img-col"
+                aria-label="Show image 4 of 5"
+                aria-pressed="false"
+              >
+                <img src="./assets/img/featuredproduct1-3.jpeg" alt="" width="424" height="857" loading="lazy" />
+              </button>
+              <button
+                type="button"
+                class="small-img-col"
+                aria-label="Show image 5 of 5"
+                aria-pressed="false"
+              >
+                <img src="./assets/img/featuredproduct1-4.jpeg" alt="" width="714" height="714" loading="lazy" />
+              </button>
             </div>
-            <div class="small-img-col" onclick="changeImage(this)">
-              <img src="./assets/img/featuredproduct1-1.jpeg" width="100%" />
-            </div>
-            <div class="small-img-col" onclick="changeImage(this)">
-              <img src="./assets/img/featuredproduct1-2.jpeg" width="100%" />
-            </div>
-            <div class="small-img-col" onclick="changeImage(this)">
-              <img src="./assets/img/featuredproduct1-3.jpeg" width="100%" />
-            </div>
-            <div class="small-img-col" onclick="changeImage(this)">
-              <img src="./assets/img/featuredproduct1-4.jpeg" width="100%" />
-            </div>
-          </div>
         </div>
-        <div class="col-2">
-          <p>Home / Sweat T-Shirt</p>
-          <h1>Men's Sweat T-shirt</h1>
-          <h4>$50.00</h4>
-          <select>
-            <option>Select Size</option>
-            <option>XXL</option>
-            <option>XL</option>
-            <option>Large</option>
-            <option>Medium</option>
-            <option>Small</option>
-          </select>
-          <input type="number" value="1" />
-          <a href="" class="btn">Add To Cart</a>
-          <h3>Product Details <i class="fa fa-indent"></i></h3>
-          <br />
+        <div class="product-info">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">Home</a> /
+            <a href="products.html?category=Clothing">Clothing</a> /
+            <span aria-current="page">T-Shirts</span>
+          </nav>
+          <h1>Men&#x27;s Sweat T-Shirt</h1>
+          <div class="rating" role="img" aria-label="Rated 4 out of 5">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star" aria-hidden="true"></i>
+            <i class="fa fa-star-o" aria-hidden="true"></i>
+          </div>
+          <p class="price">$27.99</p>
+          <form
+            class="add-to-cart"
+            data-id="sweattshirt"
+            data-name="Men&#x27;s Sweat T-Shirt"
+            data-price="27.99"
+            data-image="./assets/img/featuredproduct1.jpeg"
+          >
+              <label class="sr-only" for="size">Size</label>
+              <select id="size" name="size" required>
+                <option value="">Select Size</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+              </select>
+              <label class="sr-only" for="quantity">Quantity</label>
+              <input
+                type="number"
+                id="quantity"
+                name="quantity"
+                value="1"
+                min="1"
+                max="10"
+                required
+              />
+              <button type="submit" class="btn">Add To Cart</button>
+              <p class="form-status" role="status"></p>
+          </form>
+          <h2 class="product-details-title">
+            Product Details <i class="fa fa-indent" aria-hidden="true"></i>
+          </h2>
           <p>
-            Give your summer wardrobe a style upgrade with the HRX Men's Active
-            T-Shirt. Team it with a pair of shorts for your morning or a denims
-            for an evening out with the guys.
+            A moisture-wicking T-shirt designed for intense workouts. Soft, lightweight fabric moves with you and keeps sweat away from your skin.
           </p>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Title -->
-    <div class="small-container">
-      <div class="row row-3">
-        <h2>Related Products</h2>
-        <p>View More</p>
-      </div>
-    </div>
-
-    <!-- Featured Products -->
-    <div class="small-container">
-      <div class="row">
-        <div class="col-4">
-          <a href="gmark.html"
-            ><img src="./assets/img/featuredproduct3.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="gmark.html"><h4>Gmarks Sports Watch</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
+      <!-- Related Products -->
+      <section class="small-container section section-flush-top" aria-labelledby="related-title">
+        <div class="section-header">
+          <h2 id="related-title">Related Products</h2>
+          <a href="products.html" class="view-more">View More &#8594;</a>
         </div>
-        <div class="col-4">
-          <a href="shorts.html"
-            ><img src="./assets/img/featuredproduct6.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="shorts.html"><h4>Short For Boys Casual</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
+        <div class="product-grid">
+          <article
+            class="product-card"
+            data-name="Ankle Length Socks"
+            data-price="12.99"
+            data-rating="3.5"
+            data-category="Accessories"
+          >
+            <a href="adidassocks.html">
+              <img src="./assets/img/featuredproduct2.jpeg" alt="" width="880" height="812" loading="lazy" />
+              <h3 class="product-name">Ankle Length Socks</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 3.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$12.99</p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Gmarks Sports Watch"
+            data-price="59.99"
+            data-rating="4"
+            data-category="Accessories"
+          >
+            <a href="gmark.html">
+              <span class="badge">Sale</span>
+              <img src="./assets/img/featuredproduct3.jpeg" alt="" width="819" height="1056" loading="lazy" />
+              <h3 class="product-name">Gmarks Sports Watch</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$59.99 <s class="price-old"><span class="sr-only">Was </span>$79.99</s></p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Round Neck T-Shirt"
+            data-price="19.99"
+            data-rating="4.5"
+            data-category="Clothing"
+          >
+            <a href="roundtshirt.html">
+              <img src="./assets/img/featuredproduct4.jpeg" alt="" width="792" height="1056" loading="lazy" />
+              <h3 class="product-name">Round Neck T-Shirt</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$19.99</p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Sports Knee Sleeve"
+            data-price="24.99"
+            data-rating="4.5"
+            data-category="Accessories"
+          >
+            <a href="kneesleeve.html">
+              <img src="./assets/img/featuredproduct5.jpeg" alt="" width="233" height="416" loading="lazy" />
+              <h3 class="product-name">Sports Knee Sleeve</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$24.99</p>
+          </article>
         </div>
-        <div class="col-4">
-          <a href="blackjacket.html"
-            ><img src="./assets/img/featuredproduct7.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="blackjacket.html"><h4>Full Sleeve Men Jacket</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <a href="nikeshoe.html"
-            ><img src="./assets/img/featuredproduct8.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="nikeshoe.html"><h4>Nike Running Shoe</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-      </div>
-    </div>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <div class="footer">
+    <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="footer-col-1">
-            <h3>Download Our App</h3>
-            <p>Download App for Android and ios mobile phone.</p>
+        <div class="footer-grid">
+          <div>
+            <h2>Download Our App</h2>
+            <p>Download the app for Android and iOS mobile phones.</p>
             <div class="applogo">
-              <img src="./assets/img/footerlogo-1.png" alt="playstoreicon" />
-              <img
-                src="./assets/img/footerlogo-2.jpg"
-                alt="appstore"
-                id="footerlogo-2"
-              />
+              <img src="./assets/img/footerlogo-1.png" alt="Get it on Google Play" width="564" height="168" loading="lazy" />
+              <img src="./assets/img/footerlogo-2.jpg" alt="Download on the App Store" width="800" height="243" loading="lazy" />
             </div>
           </div>
-          <div class="footer-col-2">
-            <img src="./assets/img/logo.png" />
+          <div class="footer-brand">
+            <a href="index.html" class="logo" aria-label="Tempovolt home">
+              <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M4 6h11l13 14-13 14H4l13-14z" /><path d="M17 6h7l13 14-13 14h-7l13-14z" opacity=".55" /></svg>
+              <span>Tempo<span class="logo-accent">volt</span></span>
+            </a>
             <p>
-              Our Purpose is to Sustainably make the Pleasure and Benifits of
-              sports accessible to the many.
+              Keep the tempo. Bring the volt. Performance gear for athletes who
+              show up every day, whatever their sport.
             </p>
           </div>
-          <div class="footer-col-3">
-            <h3>Useful Links</h3>
+          <div>
+            <h2>Useful Links</h2>
             <ul>
-              <li>Coupons</li>
-              <li>Blog Post</li>
-              <li>Return Policy</li>
-              <li>Join Affiliate</li>
+              <li><a href="coupons.html">Coupons</a></li>
+              <li><a href="blog.html">Blog Post</a></li>
+              <li><a href="returns.html">Return Policy</a></li>
+              <li><a href="affiliate.html">Join Affiliate</a></li>
             </ul>
           </div>
-          <div class="footer-col-4">
-            <h3>Follow Us</h3>
-            <ul>
-              <li>Facebook</li>
-              <li>Twitter</li>
-              <li>Instagram</li>
-              <li>Youtube</li>
+          <div>
+            <h2>Follow Us</h2>
+            <ul class="social-links">
+              <li>
+                <a href="#" class="social-link" title="Coming soon"
+                  ><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a
+                >
+              </li>
+              <li>
+                <a href="#" class="social-link" title="Coming soon"
+                  ><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a
+                >
+              </li>
+              <li>
+                <a href="#" class="social-link" title="Coming soon"
+                  ><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a
+                >
+              </li>
+              <li>
+                <a href="#" class="social-link" title="Coming soon"
+                  ><i class="fa fa-youtube-play" aria-hidden="true"></i>YouTube</a
+                >
+              </li>
             </ul>
           </div>
         </div>
         <hr />
-        <p class="copyright">Copyright 2020 - Store That Seek Door</p>
+        <p class="copyright">
+          Copyright &copy; <span data-year>2026</span> Tempovolt. All rights reserved.
+        </p>
       </div>
-    </div>
-
-    <script>
-      var MenuItems = document.getElementById("MenuItems");
-      MenuItems.style.maxHeight = "0px";
-      function menutogggle() {
-        if (MenuItems.style.maxHeight == "0px") {
-          MenuItems.style.maxHeight = "200px";
-        } else {
-          MenuItems.style.maxHeight = "0px";
-        }
-      }
-      function changeImage(event) {
-        document.querySelector(".pro-img").src = event.children[0].src;
-      }
-    </script>
+    </footer>
   </body>
 </html>

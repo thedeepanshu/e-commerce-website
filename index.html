@@ -3,436 +3,527 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RedStore | Ecommerce Webiste Design</title>
+    <meta name="description" content="Tempovolt - performance sportswear, running shoes and training gear for athletes who train with energy." />
+    <meta name="theme-color" content="#0e1116" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tempovolt" />
+    <meta property="og:title" content="Tempovolt | Performance Sportswear, Shoes &amp; Training Gear" />
+    <meta property="og:description" content="Tempovolt - performance sportswear, running shoes and training gear for athletes who train with energy." />
+    <title>Tempovolt | Performance Sportswear, Shoes &amp; Training Gear</title>
+    <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./static/css/style.css" />
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font-awesome -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <script src="./static/js/main.js" defer></script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <!-- Header -->
-    <div class="header">
-      <div class="container">
-        <div class="navbar">
-          <div class="logo">
-            <a href="index.html"
-              ><img src="./assets/img/logo.png" width="155px"
-            /></a>
-          </div>
-          <nav>
-            <ul id="MenuItems">
-              <li><a href="clothes.html">Home</a></li>
-              <li><a href="products.html">Products</a></li>
-              <!-- <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li> -->
-              <li><a href="account.html">Account</a></li>
-            </ul>
-          </nav>
-          <a href="shoppingcart.html"
-            ><img src="./assets/img/cartlogo.png" width="25px" height="30px"
-          /></a>
-          <img
-            src="./assets/img/cartlogo.png"
-            width="25px"
-            height="30px"
-            class="menu-icon"
-            onclick="menutogggle()"
-          />
-        </div>
-        <div class="row">
-          <div class="col-2">
-            <h1>Give Your Workout<br />A New Style!</h1>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="index.html" class="logo" aria-label="Tempovolt home">
+          <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M4 6h11l13 14-13 14H4l13-14z" /><path d="M17 6h7l13 14-13 14h-7l13-14z" opacity=".55" /></svg>
+          <span>Tempo<span class="logo-accent">volt</span></span>
+        </a>
+        <nav aria-label="Main">
+          <ul id="MenuItems">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="account.html">Account</a></li>
+          </ul>
+        </nav>
+        <a href="shoppingcart.html" class="cart-link" aria-label="Shopping cart">
+          <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          <span class="cart-count" hidden>0</span>
+        </a>
+        <button
+          type="button"
+          class="menu-icon"
+          aria-label="Toggle menu"
+          aria-controls="MenuItems"
+          aria-expanded="false"
+        >
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">New season gear is here</p>
+            <h1>Keep The Tempo.<br /><span class="accent">Bring The Volt.</span></h1>
             <p>
               Success isn't always about greatness. It's about consistency.
-              Consistent<br />hard work gains success. Greatness will come.
+              Consistent hard work gains success. Greatness will come.
             </p>
-            <a href="products.html" class="btn">Explore Now &#8594;</a>
+            <a href="products.html" class="btn">Shop The Collection &#8594;</a>
           </div>
-          <div class="col-2">
-            <img src="./assets/img/webheader.png" alt="footballplayers" />
-          </div>
+          <img src="./assets/img/webheader.png" alt="Two football players competing for the ball" width="627" height="452" fetchpriority="high" />
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Categories -->
-    <div class="categories">
-      <div class="small-container">
-        <div class="row">
-          <div class="col-3">
-            <img src="./assets/img/category-1.jfif" alt="sportsshoe" />
-          </div>
-          <div class="col-3">
-            <img src="./assets/img/category-2.jfif" alt="sportstshirt" />
-          </div>
-          <div class="col-3">
-            <img src="./assets/img/category-3.jfif" alt="sportsjacket" />
-          </div>
+      <!-- Categories -->
+      <section class="small-container section" aria-labelledby="categories-title">
+        <h2 id="categories-title" class="sr-only">Shop by category</h2>
+        <div class="category-grid">
+          <a href="products.html?category=Shoes" class="category-tile">
+            <img src="./assets/img/category-1.jfif" alt="Black sneakers" width="500" height="500" loading="lazy" />
+            <span>Shoes</span>
+          </a>
+          <a href="products.html?category=Clothing" class="category-tile">
+            <img src="./assets/img/category-2.jfif" alt="Two cyclists in sportswear" width="500" height="500" loading="lazy" />
+            <span>Clothing</span>
+          </a>
+          <a href="products.html?category=Accessories" class="category-tile">
+            <img src="./assets/img/category-3.jfif" alt="Athlete taking a photo beside a road bike" width="500" height="500" loading="lazy" />
+            <span>Accessories</span>
+          </a>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- Features -->
-    <div class="small-container">
-      <h2 class="title">Featured Product</h2>
-      <div class="row">
-        <div class="col-4">
-          <a href="redtshirt.html"
-            ><img src="./assets/img/redtshirt1.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="redtshirt.html"><h4>Red Collar T-shirt</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <a href="asicsshoe.html"
-            ><img
-              src="./assets/img/acsicsshoes1.jpeg"
-              alt="RedTshirtGuy"
-              id="acsicsshoes"
-          /></a>
-          <a href="asicsshoe.html"><h4>Asics Running Shoes</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <a href="greentshirt.html"
-            ><img src="./assets/img/liningshirt1.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="greentshirt.html"><h4>Green Collar T-shirt</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <a href="blacklower.html"
-            ><img src="./assets/img/blacklower1.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="blacklower.html"><h4>Black Sports Lower</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-      </div>
-
-      <!-- Latest Products -->
-      <h2 class="title">Latest Products</h2>
-      <div class="row">
-        <div class="col-4">
-          <a href="sweattshirt.html"
-            ><img src="./assets/img/featuredproduct1.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="sweattshirt.html"><h4>Men's Sweat T-shirt</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <a href="adidassocks.html"
-            ><img
-              src="./assets/img/featuredproduct2.jpeg"
-              alt="RedTshirtGuy"
-              id="acsicsshoes"
-          /></a>
-          <a href="adidassocks.html"><h4>Ankle Length Socs</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <a href="gmark.html"
-            ><img src="./assets/img/featuredproduct3.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="gmark.html"><h4>Gmarks Sports Watch</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <a href="roundtshirt.html"
-            ><img src="./assets/img/featuredproduct4.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="roundtshirt.html"><h4>Round Neck T-Shirt</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <a href="kneesleeve.html"
-            ><img src="./assets/img/featuredproduct5.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="kneesleeve.html"><h4>Sports Knee Sleeve</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <a href="shorts.html"
-            ><img src="./assets/img/featuredproduct6.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="shorts.html"><h4>Short For Boys Casual</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <a href="blackjacket.html"
-            ><img src="./assets/img/featuredproduct7.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="blackjacket.html"><h4>Full Sleeve Men Jacket</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-        <div class="col-4">
-          <a href="nikeshoe.html"
-            ><img src="./assets/img/featuredproduct8.jpeg" alt="RedTshirtGuy"
-          /></a>
-          <a href="nikeshoe.html"><h4>Nike Running Shoe</h4></a>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star"></i>
-            <i class="fa fa-star-half-o"></i>
-          </div>
-          <p>$50.00</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Offer -->
-    <div class="offer">
-      <div class="small-container">
-        <div class="row">
-          <div class="col-2">
-            <img
-              src="./assets/img/exclusiveproduct.png"
-              alt="MiBand4"
-              class="offer-img"
-            />
-          </div>
-          <div class="col-2">
-            <p>Exclusively Available On StoreThatSeekDoor</p>
-            <h1>Smart Band 4</h1>
-            <small
-              >The Mi Smart Band 4 features a 39.9% larger than (Mi Band 3)
-              AMOLED color full-touch display with adjustable brightness, so
-              everything is clear as be.</small
-            >
-            <a href="" class="btn">Buy Now &#8594;</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Testimonials -->
-    <div class="testimonial">
-      <div class="small-container">
-        <div class="row">
-          <div class="col-3">
-            <i class="fa fa-quote-left"></i>
-            <p>
-              Loreum Ipsum is simply dummy text of the printing and typesetting
-              industry. Loreum Ipsum has been the industry's standard dummy text
-              ever
-            </p>
-            <div class="rating">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-half-o"></i>
+      <!-- Products -->
+      <section class="small-container section section-flush-top" aria-labelledby="featured-title">
+        <h2 id="featured-title" class="title">Featured Products</h2>
+        <div class="product-grid">
+          <article
+            class="product-card"
+            data-name="Red Collar T-Shirt"
+            data-price="34.99"
+            data-rating="4"
+            data-category="Clothing"
+          >
+            <a href="redtshirt.html">
+              <span class="badge">Sale</span>
+              <img src="./assets/img/redtshirt1.jpeg" alt="" width="704" height="1056" loading="lazy" />
+              <h3 class="product-name">Red Collar T-Shirt</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
             </div>
-            <img src="./assets/img/reviewpic1.jfif" />
-            <h3>Sean Taylor</h3>
-          </div>
-          <div class="col-3">
-            <i class="fa fa-quote-left"></i>
-            <p>
-              Loreum Ipsum is simply dummy text of the printing and typesetting
-              industry. Loreum Ipsum has been the industry's standard dummy text
-              ever
-            </p>
-            <div class="rating">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-half-o"></i>
+            <p class="price">$34.99 <s class="price-old"><span class="sr-only">Was </span>$44.99</s></p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Asics Running Shoes"
+            data-price="119.99"
+            data-rating="3.5"
+            data-category="Shoes"
+          >
+            <a href="asicsshoe.html">
+              <span class="badge">Sale</span>
+              <img src="./assets/img/acsicsshoes1.jpeg" alt="" width="812" height="1056" loading="lazy" />
+              <h3 class="product-name">Asics Running Shoes</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 3.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
             </div>
-            <img src="./assets/img/reviewpic2.jpg" />
-            <h3>Joe Parkour</h3>
-          </div>
-          <div class="col-3">
-            <i class="fa fa-quote-left"></i>
-            <p>
-              Loreum Ipsum is simply dummy text of the printing and typesetting
-              industry. Loreum Ipsum has been the industry's standard dummy text
-              ever
-            </p>
-            <div class="rating">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star-half-o"></i>
+            <p class="price">$119.99 <s class="price-old"><span class="sr-only">Was </span>$149.99</s></p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Green Collar T-Shirt"
+            data-price="32.99"
+            data-rating="4"
+            data-category="Clothing"
+          >
+            <a href="greentshirt.html">
+              <img src="./assets/img/liningshirt1.jpeg" alt="" width="704" height="1056" loading="lazy" />
+              <h3 class="product-name">Green Collar T-Shirt</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
             </div>
-            <img src="./assets/img/reviewpic3.jpg" />
-            <h3>Natasha</h3>
-          </div>
+            <p class="price">$32.99</p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Black Sports Lower"
+            data-price="44.99"
+            data-rating="4.5"
+            data-category="Clothing"
+          >
+            <a href="blacklower.html">
+              <img src="./assets/img/blacklower1.jpeg" alt="" width="623" height="891" loading="lazy" />
+              <h3 class="product-name">Black Sports Lower</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$44.99</p>
+          </article>
         </div>
-      </div>
-    </div>
+        <h2 class="title">Latest Products</h2>
+        <div class="product-grid">
+          <article
+            class="product-card"
+            data-name="Men&#x27;s Sweat T-Shirt"
+            data-price="27.99"
+            data-rating="4"
+            data-category="Clothing"
+          >
+            <a href="sweattshirt.html">
+              <img src="./assets/img/featuredproduct1.jpeg" alt="" width="572" height="1056" loading="lazy" />
+              <h3 class="product-name">Men&#x27;s Sweat T-Shirt</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$27.99</p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Ankle Length Socks"
+            data-price="12.99"
+            data-rating="3.5"
+            data-category="Accessories"
+          >
+            <a href="adidassocks.html">
+              <img src="./assets/img/featuredproduct2.jpeg" alt="" width="880" height="812" loading="lazy" />
+              <h3 class="product-name">Ankle Length Socks</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 3.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$12.99</p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Gmarks Sports Watch"
+            data-price="59.99"
+            data-rating="4"
+            data-category="Accessories"
+          >
+            <a href="gmark.html">
+              <span class="badge">Sale</span>
+              <img src="./assets/img/featuredproduct3.jpeg" alt="" width="819" height="1056" loading="lazy" />
+              <h3 class="product-name">Gmarks Sports Watch</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$59.99 <s class="price-old"><span class="sr-only">Was </span>$79.99</s></p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Round Neck T-Shirt"
+            data-price="19.99"
+            data-rating="4.5"
+            data-category="Clothing"
+          >
+            <a href="roundtshirt.html">
+              <img src="./assets/img/featuredproduct4.jpeg" alt="" width="792" height="1056" loading="lazy" />
+              <h3 class="product-name">Round Neck T-Shirt</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$19.99</p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Sports Knee Sleeve"
+            data-price="24.99"
+            data-rating="4.5"
+            data-category="Accessories"
+          >
+            <a href="kneesleeve.html">
+              <img src="./assets/img/featuredproduct5.jpeg" alt="" width="233" height="416" loading="lazy" />
+              <h3 class="product-name">Sports Knee Sleeve</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$24.99</p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Casual Shorts for Boys"
+            data-price="22.99"
+            data-rating="4.5"
+            data-category="Clothing"
+          >
+            <a href="shorts.html">
+              <img src="./assets/img/featuredproduct6.jpeg" alt="" width="880" height="925" loading="lazy" />
+              <h3 class="product-name">Casual Shorts for Boys</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$22.99</p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Full Sleeve Men&#x27;s Jacket"
+            data-price="89.99"
+            data-rating="4.5"
+            data-category="Clothing"
+          >
+            <a href="blackjacket.html">
+              <img src="./assets/img/featuredproduct7.jpeg" alt="" width="880" height="1056" loading="lazy" />
+              <h3 class="product-name">Full Sleeve Men&#x27;s Jacket</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$89.99</p>
+          </article>
+          <article
+            class="product-card"
+            data-name="Nike Running Shoes"
+            data-price="129.99"
+            data-rating="4.5"
+            data-category="Shoes"
+          >
+            <a href="nikeshoe.html">
+              <img src="./assets/img/featuredproduct8.jpeg" alt="" width="880" height="1056" loading="lazy" />
+              <h3 class="product-name">Nike Running Shoes</h3>
+            </a>
+            <div class="rating" role="img" aria-label="Rated 4.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <p class="price">$129.99</p>
+          </article>
+        </div>
+      </section>
 
-    <!-- Brands -->
-    <div class="brands">
-      <div class="small-container">
-        <div class="row">
-          <div class="col-5">
-            <img src="./assets/img/brandimg-1.png" alt="" />
-          </div>
-          <div class="col-5">
-            <img src="./assets/img/brandimg-2.png" alt="" />
-          </div>
-          <div class="col-5">
-            <img src="./assets/img/brandimg-3.png" alt="" />
-          </div>
-          <div class="col-5">
-            <img src="./assets/img/brandimg-4.png" alt="" />
-          </div>
-          <div class="col-5">
-            <img src="./assets/img/brandimg-5.png" alt="" />
+      <!-- Offer -->
+      <section class="offer section" aria-labelledby="offer-title">
+        <div class="small-container offer-grid">
+          <img src="./assets/img/exclusiveproduct.png" alt="Mi Smart Band 4" width="991" height="967" loading="lazy" />
+          <div>
+            <p class="eyebrow">Exclusively at Tempovolt</p>
+            <h2 id="offer-title">Smart Band 4</h2>
+            <p>
+              The Mi Smart Band 4 features a 39.9% larger (than Mi Band 3)
+              AMOLED colour full-touch display with adjustable brightness, so
+              everything is clear as can be.
+            </p>
+            <a href="smartband.html" class="btn">Buy Now &#8594;</a>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="small-container section section-tight-bottom" aria-labelledby="testimonials-title">
+        <h2 id="testimonials-title" class="title">What Our Customers Say</h2>
+        <div class="testimonial-grid">
+          <figure class="testimonial-card">
+            <i class="fa fa-quote-left" aria-hidden="true"></i>
+            <blockquote>
+              <p>
+                I bought the Asics running shoes for marathon training and they've been brilliant: light, well cushioned and true to size. My order arrived in three days.
+              </p>
+            </blockquote>
+            <div class="rating" role="img" aria-label="Rated 5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </div>
+            <figcaption>
+              <img src="./assets/img/reviewpic1.jfif" alt="" width="540" height="540" loading="lazy" />
+              <h3>Sean Taylor</h3>
+              <p>Marathon runner</p>
+            </figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <i class="fa fa-quote-left" aria-hidden="true"></i>
+            <blockquote>
+              <p>
+                The black sports lower is now my go-to for training. It stretches enough for vaults and climbs, and it still looks sharp after dozens of washes.
+              </p>
+            </blockquote>
+            <div class="rating" role="img" aria-label="Rated 4.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <figcaption>
+              <img src="./assets/img/reviewpic2.jpg" alt="" width="640" height="640" loading="lazy" />
+              <h3>Joe Parkour</h3>
+              <p>Parkour coach</p>
+            </figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <i class="fa fa-quote-left" aria-hidden="true"></i>
+            <blockquote>
+              <p>
+                Great activewear at fair prices. I ordered the wrong T-shirt size and the exchange was quick and completely hassle-free.
+              </p>
+            </blockquote>
+            <div class="rating" role="img" aria-label="Rated 4.5 out of 5">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+            </div>
+            <figcaption>
+              <img src="./assets/img/reviewpic3.jpg" alt="" width="564" height="564" loading="lazy" />
+              <h3>Natasha</h3>
+              <p>Yoga instructor</p>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Brands -->
+      <section class="brands" aria-labelledby="brands-title">
+        <div class="small-container">
+          <h2 id="brands-title" class="brands-title">Trusted by leading brands</h2>
+          <div class="brand-row">
+            <div class="col-5">
+              <img src="./assets/img/brandimg-1.png" alt="Godrej" width="1280" height="617" loading="lazy" />
+            </div>
+            <div class="col-5">
+              <img src="./assets/img/brandimg-2.png" alt="Oppo" width="1700" height="1700" loading="lazy" />
+            </div>
+            <div class="col-5">
+              <img src="./assets/img/brandimg-3.png" alt="Coca-Cola" width="800" height="800" loading="lazy" />
+            </div>
+            <div class="col-5">
+              <img src="./assets/img/brandimg-4.png" alt="PayPal" width="1600" height="1200" loading="lazy" />
+            </div>
+            <div class="col-5">
+              <img src="./assets/img/brandimg-5.png" alt="Philips" width="500" height="500" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <div class="footer">
+    <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="footer-col-1">
-            <h3>Download Our App</h3>
-            <p>Download App for Android and ios mobile phone.</p>
+        <div class="footer-grid">
+          <div>
+            <h2>Download Our App</h2>
+            <p>Download the app for Android and iOS mobile phones.</p>
             <div class="applogo">
-              <img src="./assets/img/footerlogo-1.png" alt="playstoreicon" />
-              <img
-                src="./assets/img/footerlogo-2.jpg"
-                alt="appstore"
-                id="footerlogo-2"
-              />
+              <img src="./assets/img/footerlogo-1.png" alt="Get it on Google Play" width="564" height="168" loading="lazy" />
+              <img src="./assets/img/footerlogo-2.jpg" alt="Download on the App Store" width="800" height="243" loading="lazy" />
             </div>
           </div>
-          <div class="footer-col-2">
-            <img src="./assets/img/logo.png" />
+          <div class="footer-brand">
+            <a href="index.html" class="logo" aria-label="Tempovolt home">
+              <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><path d="M4 6h11l13 14-13 14H4l13-14z" /><path d="M17 6h7l13 14-13 14h-7l13-14z" opacity=".55" /></svg>
+              <span>Tempo<span class="logo-accent">volt</span></span>
+            </a>
             <p>
-              Our Purpose is to Sustainably make the Pleasure and Benifits of
-              sports accessible to the many.
+              Keep the tempo. Bring the volt. Performance gear for athletes who
+              show up every day, whatever their sport.
             </p>
           </div>
-          <div class="footer-col-3">
-            <h3>Useful Links</h3>
+          <div>
+            <h2>Useful Links</h2>
             <ul>
-              <li>Coupons</li>
-              <li>Blog Post</li>
-              <li>Return Policy</li>
-              <li>Join Affiliate</li>
+              <li><a href="coupons.html">Coupons</a></li>
+              <li><a href="blog.html">Blog Post</a></li>
+              <li><a href="returns.html">Return Policy</a></li>
+              <li><a href="affiliate.html">Join Affiliate</a></li>
             </ul>
           </div>
-          <div class="footer-col-4">
-            <h3>Follow Us</h3>
-            <ul>
-              <li>Facebook</li>
-              <li>Twitter</li>
-              <li>Instagram</li>
-              <li>Youtube</li>
+          <div>
+            <h2>Follow Us</h2>
+            <ul class="social-links">
+              <li>
+                <a href="#" class="social-link" title="Coming soon"
+                  ><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a
+                >
+              </li>
+              <li>
+                <a href="#" class="social-link" title="Coming soon"
+                  ><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a
+                >
+              </li>
+              <li>
+                <a href="#" class="social-link" title="Coming soon"
+                  ><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a
+                >
+              </li>
+              <li>
+                <a href="#" class="social-link" title="Coming soon"
+                  ><i class="fa fa-youtube-play" aria-hidden="true"></i>YouTube</a
+                >
+              </li>
             </ul>
           </div>
         </div>
         <hr />
-        <p class="copyright">Copyright 2020 - Store That Seek Door</p>
+        <p class="copyright">
+          Copyright &copy; <span data-year>2026</span> Tempovolt. All rights reserved.
+        </p>
       </div>
-    </div>
-
-    <script>
-      var MenuItems = document.getElementById("MenuItems");
-
-      MenuItems.style.maxHeight = "0px";
-
-      function menutogggle() {
-        if (MenuItems.style.maxHeight == "0px") {
-          MenuItems.style.maxHeight = "200px";
-        } else {
-          MenuItems.style.maxHeight = "0px";
-        }
-      }
-    </script>
+    </footer>
   </body>
 </html>
